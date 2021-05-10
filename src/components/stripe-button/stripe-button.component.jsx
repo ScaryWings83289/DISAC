@@ -13,7 +13,7 @@ const StripeCheckoutButton = ({ price }) => {
     return (
         <StripeCheckout
             label='Pay Now'
-            name='Sifoz Clothing Ltd.'
+            name='DISAC Clothing Ltd.'
             billingAddress
             shippingAddress
             image='https://res.cloudinary.com/scarywings83289/image/upload/v1619760229/blogs/stripe-logo_pb2sx0.png'

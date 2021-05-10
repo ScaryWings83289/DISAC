@@ -13,8 +13,8 @@ export const CartContainer = styled.div`
 `;
 
 export const ShoppingIcon = styled(ShoppingIconSVG)`
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 `;
 
 export const ItemCountContainer = styled.span`
@@ -22,4 +22,5 @@ export const ItemCountContainer = styled.span`
     font-size: 10px;
     font-weight: bold;
     bottom: 12px;
+    color: #ffffff;
 `;

@@ -5,7 +5,7 @@ export const DirectoryMenuContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px 40px;
+    padding: 0px 20px;
 
     @media(max-width: 800px) {
         padding: 0 10px;

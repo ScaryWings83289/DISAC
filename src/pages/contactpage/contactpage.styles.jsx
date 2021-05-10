@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TitleContainer = styled.h2`
     text-align: center;
-    margin: 0px auto;
+    margin: 20px auto 0px auto;
     font-weight: 400;
 
     @media screen and (max-width: 930px) {

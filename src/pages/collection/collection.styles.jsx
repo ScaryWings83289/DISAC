@@ -4,10 +4,10 @@ export const CollectionPageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px 40px;
+    padding: 20px 40px;
 
     @media(max-width: 800px) {
-        padding: 0px 10px;
+        padding: 10px;
     }
 `;
 

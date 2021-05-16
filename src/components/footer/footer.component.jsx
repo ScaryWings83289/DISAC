@@ -20,7 +20,7 @@ const Footer = () => {
             <Container maxWidth="md">
                 <Toolbar className={classes.typography}>
                     <Typography variant="body1" color="inherit">
-                        &copy; 2021 Sifoz Clothing Pvt. Ltd.
+                        &copy; 2021 DISAC Pvt. Ltd.
                     </Typography>
                 </Toolbar>
             </Container>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
@@ -10,12 +12,16 @@ import {
 } from '../../redux/user/user.actions';
 
 import {
+    SignInBoxContainer,
+    ImageContainer,
     SignInContainer,
     SignInTitle,
-    ButtonsBarContainer
+    SignInSubtitle,
+    ButtonsBarContainer,
+    AccountContainer
 } from './sign-in.styles';
 
-const SignIn = ({ emailSignInStart, googleSignInStart }) => {
+const SignIn = ({ emailSignInStart, googleSignInStart, setCurrentState }) => {
     const [userCredentials, setCredentials] = useState({ email: '', password: '' });
 
     const { email, password } = userCredentials;
@@ -31,39 +37,45 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     };
 
     return (
-        <SignInContainer>
-            <SignInTitle>I already have an account</SignInTitle>
-            <span>Sign in with your email and password</span>
-
-            <form onSubmit={handleSubmit}>
-                <FormInput
-                    name='email'
-                    type='email'
-                    handleChange={handleChange}
-                    value={email}
-                    label='Email'
-                    required
-                />
-                <FormInput
-                    name='password'
-                    type='password'
-                    value={password}
-                    handleChange={handleChange}
-                    label='Password'
-                    required
-                />
-                <ButtonsBarContainer>
-                    <CustomButton type='submit'> Sign in </CustomButton>
-                    <CustomButton
-                        type='button'
-                        onClick={googleSignInStart}
-                        isGoogleSignIn
-                    >
-                        Sign in with Google
-                    </CustomButton>
-                </ButtonsBarContainer>
-            </form>
-        </SignInContainer>
+        <SignInBoxContainer>
+            <ImageContainer>
+                <img src="https://res.cloudinary.com/scarywings83289/image/upload/v1621240902/DISAC/skill_dk5flg.jpg" alt="signin"></img>
+            </ImageContainer>
+            <SignInContainer>
+                <SignInSubtitle><FontAwesomeIcon icon={faUser} /></SignInSubtitle>
+                <SignInTitle>Sign In</SignInTitle>
+                
+                <form onSubmit={handleSubmit}>
+                    <FormInput
+                        name='email'
+                        type='email'
+                        handleChange={handleChange}
+                        value={email}
+                        label='Email'
+                        required
+                    />
+                    <FormInput
+                        name='password'
+                        type='password'
+                        value={password}
+                        handleChange={handleChange}
+                        label='Password'
+                        required
+                    />
+                    <ButtonsBarContainer>
+                        <CustomButton type='submit'> Sign in </CustomButton>
+                        <CustomButton
+                            type='button'
+                            onClick={googleSignInStart}
+                            isGoogleSignIn
+                        >
+                            Sign in with Google
+                        </CustomButton>
+                    </ButtonsBarContainer>
+                </form>
+                <AccountContainer>Don't have an account ? <button onClick={() => {setCurrentState(2)}}>Sign Up.</button></AccountContainer>
+            </SignInContainer>
+        </SignInBoxContainer>
     );
 };
 

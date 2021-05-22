@@ -44,7 +44,7 @@ const CheckoutPage = ({ cartItems, total }) => (
                 <CheckoutItem key={cartItem.id} cartItem={cartItem} />
             ))}
             <TotalContainer>TOTAL: <FontAwesomeIcon icon={faRupeeSign} />{total}</TotalContainer>
-            <StripeCheckoutButton price={total} />
+            <StripeCheckoutButton price={total} cartItem={cartItems} />
         </CheckoutPageContainer>
         <Footer />
     </div>

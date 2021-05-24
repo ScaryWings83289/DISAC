@@ -1,24 +1,34 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
+import EmailAlert from './../alert/alert.component';
 
 const Contact = () => {
+    const [dialogIsOpen, setDialogIsOpen] = useState(false);
     const [contactFormCredentials, setContactFormCredentials] = useState({ 
         name: '',
         email: '',
         message: '',
-        subject: '',
+        mobile: '',
     });
+
+    const closeDialog = () => setDialogIsOpen(false)
 
     const handleSubmit = event => {
         event.preventDefault();
-        alert("Form submitted");
-        console.log(contactFormCredentials);
+        setDialogIsOpen(true);
+        emailjs.send('disac_service','template_zwhx02f', contactFormCredentials, 'user_qvzSnJpuXLaZ2uvHQdBDY').then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        }).catch((err) => {
+            console.log('FAILED...', err);
+        });
         setContactFormCredentials({
             name: '',
             email: '',
             message: '', 
-            subject: '',
+            mobile: '',
         });
     };
 
@@ -26,6 +36,9 @@ const Contact = () => {
         const { value, name } = event.target;
         setContactFormCredentials({ ...contactFormCredentials, [name]: value });
     };
+
+    const header = 'Form submitted successfully!';
+    const body = `We have received your message. Our sales team will get back to you as soon as possible.`;
 
     return (
         <form onSubmit={handleSubmit}>
@@ -46,11 +59,11 @@ const Contact = () => {
                 required
             />
             <FormInput 
-                name='subject'
-                type='text'
+                name='mobile'
+                type='number'
                 handleChange={handleChange}
-                value={contactFormCredentials.subject}
-                label='Subject'
+                value={contactFormCredentials.mobile}
+                label='Mobile'
                 required
             />
             <FormInput 
@@ -62,6 +75,7 @@ const Contact = () => {
                 required
             />
             <CustomButton type='submit'>Send Message</CustomButton>
+            <EmailAlert open={dialogIsOpen} onClose={closeDialog} header={header} body={body} />
         </form>
     );
 }

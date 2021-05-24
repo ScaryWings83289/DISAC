@@ -7,7 +7,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 const EmailALert = (props) => {
-    const { open, onClose } = props;
+    const { open, onClose, header, body } = props;
 
     return (
         <Dialog
@@ -16,10 +16,10 @@ const EmailALert = (props) => {
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
         >
-            <DialogTitle id="alert-dialog-title">{"Transaction successfull!"}</DialogTitle>
+            <DialogTitle id="alert-dialog-title">{header}</DialogTitle>
             <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                    An email has been sent with the details of your purchase alongwith a receipt.
+                    {body}
                 </DialogContentText>
             </DialogContent>
             <DialogActions>

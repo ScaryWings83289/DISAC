@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Redirect } from 'react-router';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -19,7 +18,6 @@ import {
 } from './header.styles';
 
 const Header = ({ currentUser, hidden, signOutStart }) => {
-    const cart = hidden ? null : <CartDropdown />;
     return (
         <HeaderContainer>
             <LogoContainer to='/'>
@@ -29,7 +27,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
                 <OptionLink to='/shop'>SHOP</OptionLink>
                 <OptionLink to='/contact'>CONTACT</OptionLink>
                 {currentUser ? (
-                    <OptionLink as='div' onClick={signOutStart}>
+                    <OptionLink to='/' onClick={signOutStart}>
                         SIGN OUT
                     </OptionLink>
                 ) : (
@@ -37,9 +35,11 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
                 )}
                 <CartIcon />
             </OptionsContainer>
-            {/*{hidden ? null : <CartDropdown />}*/}
-            {currentUser ? cart : console.log("Hello")}
-            {/*<Redirect from="*" to='/signin'  />*/}
+            {currentUser ? (
+                hidden ? null : <CartDropdown />
+            ) : (
+                console.log('hello')
+            )}
         </HeaderContainer>
     )
 };

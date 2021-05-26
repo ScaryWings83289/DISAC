@@ -39,7 +39,7 @@ const StripeCheckoutButton = ({ price, cartItem, clearItem }) => {
         emailjs.send('disac_service','template_hr32h83', orderSummary, 'user_qvzSnJpuXLaZ2uvHQdBDY').then((response) => {
             console.log('SUCCESS!', response.status, response.text);
         }).catch((err) => {
-                console.log('FAILED...', err);
+            console.log('FAILED...', err);
         });
         cartItem.map((item) => {
             return clearItem(item);

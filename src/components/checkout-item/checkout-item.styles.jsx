@@ -3,38 +3,42 @@ import styled from 'styled-components';
 export const CheckoutItemContainer = styled.div`
     width: 100%;
     display: flex;
+    align-items: center;
     min-height: 100px;
     border-bottom: 1px solid darkgrey;
     padding: 15px 0;
-    font-size: 20px;
-    align-items: center;
+    font-size: 16px;
 
     @media screen and (max-width: 800px) {
-        font-size: 18px;
+        font-size: 13px;
     }
 `;
 
 export const ImageContainer = styled.div`
-    width: 23%;
-    padding-right: 15px;
+    width: 22%;
 
     img {
-        width: 100%;
-        height: 100%;
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: 150px;
+
+        @media screen and (max-width: 800px) {
+            width: 90%;
+            height: auto;
+        }
     }
 `;
 
 export const TextContainer = styled.span`
-    width: 23%;
+    width: 22%;
     display: flex;
     justify-content: center;
-
-    @media screen and (max-width: 800px) {
-        width: 22%;
-    }
+    padding: 0 5px;
 `;
 
 export const QuantityContainer = styled(TextContainer)`
+    width: 22%;
     display: flex;
     justify-content: center;
 
@@ -54,7 +58,7 @@ export const QuantityContainer = styled(TextContainer)`
 `;
 
 export const RemoveButtonContainer = styled.div`
-    padding-left: 12px;
+    width: 12%;
     cursor: pointer;
     display: flex;
     justify-content: center;

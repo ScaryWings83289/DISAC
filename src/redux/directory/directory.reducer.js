@@ -31,6 +31,13 @@ const INITIAL_STATE = {
             size: 'large',
             id: 5,
             linkUrl: 'shop/mens'
+        },
+        {
+            title: 'kids',
+            imageUrl: 'https://res.cloudinary.com/scarywings83289/image/upload/v1622885711/DISAC/6_b6pp1y.jpg',
+            size: 'large',
+            id: 6,
+            linkUrl: 'shop/kids'
         }
     ]
 };

@@ -6,7 +6,6 @@ import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 
 import CollectionsOverviewContainer from '../../components/collections-overview/collections-overview.container';
 import CollectionPageContainer from '../collection/collection.container';
-import Footer from './../../components/footer/footer.component';
 
 const ShopPage = ({ fetchCollectionsStart, match }) => {
     useEffect(() => {
@@ -24,7 +23,6 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
                 path={`${match.path}/:collectionId`}
                 component={CollectionPageContainer}
             />
-            <Footer />
         </div>
     );
 };

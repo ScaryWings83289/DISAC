@@ -9,6 +9,7 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage from './pages/checkout/checkout.component';
 import ContactPage from './pages/contactpage/contactpage.component';
 import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
 
 import { GlobalStyle } from './global.styles';
 
@@ -37,6 +38,7 @@ const App = ({ checkUserSession, currentUser }) => {
                     }
                 />
             </Switch>
+            <Footer />
         </div>
     );
 };

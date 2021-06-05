@@ -8,6 +8,9 @@ export const CollectionItemContainer = styled.div`
     height: 350px;
     align-items: center;
     position: relative;
+    border-radius: 10px;
+    margin: 0 10px;
+    box-shadow: -1px 4px 28px 0px rgb(0 0 0 / 10%);
 
     &:hover {
         .image {
@@ -22,6 +25,7 @@ export const CollectionItemContainer = styled.div`
 
     @media screen and (max-width: 800px) {
         width: 45vw;
+        margin: 0px;
 
         &:hover {
             .image {
@@ -36,15 +40,16 @@ export const CollectionItemContainer = styled.div`
 `;
 
 export const AddButton = styled(CustomButton)`
-    width: 80%;
+    width: 100%;
     opacity: 0.7;
     position: absolute;
-    top: 255px;
+    bottom: 56px;
     display: none;
 
     @media screen and (max-width: 800px) {
         display: block;
         opacity: 0.9;
+        bottom: 55px;
         min-width: unset;
         padding: 0 10px;
     }
@@ -52,36 +57,48 @@ export const AddButton = styled(CustomButton)`
 
 export const BackgroundImage = styled.div`
     width: 100%;
-    height: 95%;
+    height: 85%;
     background-size: cover;
     background-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     margin-bottom: 5px;
     background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
 
 export const CollectionFooterContainer = styled.div`
     width: 100%;
-    height: 5%;
+    height: 15%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 18px;
+    padding: 0 10px;
+
+    @media screen and (max-width: 800px) {
+        padding: 0px 5px;
+    }
 `;
 
 export const NameContainer = styled.span`
-    width: 90%;
-    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    width: 70%;
 
     @media screen and (max-width: 800px) {
+        width: 65%;
         font-size: 15px;
     }
 `;
 
 export const PriceContainer = styled.span`
-    width: 20%;
+    font-size: 17px;
+    font-weight: 500;
+    width: 30%;
     text-align: right;
 
     @media screen and (max-width: 800px) {
-        width: 30%;
+        width: 35%;
         font-size: 15px;
     }
 `;

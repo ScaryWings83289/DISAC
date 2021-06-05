@@ -1,30 +1,11 @@
 import React from 'react';
-import { AppBar, Container, Toolbar, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles({
-    root: {
-        backgroundColor: "#000000",
-    },
-    typography: {
-        display: "flex",
-        justifyContent: "center",
-    }
-});
+import { FooterContainer, TitleContainer } from './footer.styles';
  
 const Footer = () => {    
-    const classes = useStyles();
-
     return (
-        <AppBar position="static" className={classes.root}>
-            <Container maxWidth="md">
-                <Toolbar className={classes.typography}>
-                    <Typography variant="body1" color="inherit">
-                        &copy; 2021 DISAC Pvt. Ltd.
-                    </Typography>
-                </Toolbar>
-            </Container>
-        </AppBar>
+        <FooterContainer>
+            <TitleContainer>&copy; 2021 DISAC Pvt. Ltd.</TitleContainer>
+        </FooterContainer>
     );
 }
  

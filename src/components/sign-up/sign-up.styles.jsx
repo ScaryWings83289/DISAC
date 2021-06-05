@@ -27,8 +27,8 @@ export const SignInSubtitle = styled.span`
     height: 40px;
     width: 40px;
     margin: 0 auto;
-    background: black;
-    color: white;
+    background: #4285f4;
+    color: #ffffff;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -72,6 +72,11 @@ export const ImageContainer = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
+        opacity: 0.9;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 
     @media screen and (max-width: 900px) {

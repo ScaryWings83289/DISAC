@@ -55,10 +55,10 @@ const StripeCheckoutButton = ({ price, cartItem, clearItem }) => {
             <EmailAlert open={dialogIsOpen} onClose={closeDialog} header={header} body={body} />
             <StripeCheckout
                 label='Pay Now'
-                name='DISAC Clothing Ltd.'
+                name='DISAC Pvt. Ltd.'
                 billingAddress
                 shippingAddress
-                image='https://res.cloudinary.com/scarywings83289/image/upload/v1619760229/blogs/stripe-logo_pb2sx0.png'
+                image='https://res.cloudinary.com/scarywings83289/image/upload/v1622783825/DISAC/favicon_ajs8qp.png'
                 description={`Your total is ₹${price}`}
                 amount={priceForStripe}
                 currency="INR"

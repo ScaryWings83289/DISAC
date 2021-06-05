@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 
 export const TitleContainer = styled.h2`
+    width: 1000px; 
     text-align: center;
     margin: 20px auto 0px auto;
     font-weight: 400;
 
     @media screen and (max-width: 930px) {
-        Font-size: 20px;
+        width: 90%;
+        font-size: 19px;
         margin: 20px;
     }
 `;
 
 export const MapContainer = styled.div`
     width: 900px;
-    min-height: 74vh;
+    min-height: 72.2vh;
     display: flex;
     justify-content: space-between;
     align-items: center;

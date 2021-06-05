@@ -6,6 +6,8 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
+import { ReactComponent as GoogleIconSVG } from '../../assets/google.svg';
+
 import {
     googleSignInStart,
     emailSignInStart
@@ -68,8 +70,9 @@ const SignIn = ({ emailSignInStart, googleSignInStart, setCurrentState }) => {
                             type='button'
                             onClick={googleSignInStart}
                             isGoogleSignIn
+                            className='google'
                         >
-                            Sign in with Google
+                            Sign in with <GoogleIconSVG style={{width: 30, marginLeft: 5}} />
                         </CustomButton>
                     </ButtonsBarContainer>
                 </form>

@@ -6,7 +6,7 @@ import imageList from './images';
 
 const CarouselContainer = () => {
     return (
-        <Carousel showArrows={true} autoPlay={true} showThumbs={false} infiniteLoop={true}>
+        <Carousel showArrows={true} showStatus={false} autoPlay={true} showThumbs={false} infiniteLoop={true}>
             {imageList.map(image => {
                 return (
                     <div key={image.id}>

@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const MenuItemContainer = styled.div`
-	height: ${({ size }) => (size ? '380px' : '240px')};
-	min-width: 30%;
-	overflow: hidden;
-	flex: 1 1 auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 1px solid black;
-	margin: 0 7.5px 15px;
-	overflow: hidden;
+    width: 30%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 10px 20px;
+    border-radius: 10px;
+    box-shadow: -1px 4px 28px 0px rgb(0 0 0 / 10%);
 
 	&:hover {
 		cursor: pointer;
@@ -21,20 +21,14 @@ export const MenuItemContainer = styled.div`
 		}
 
 		& .content {
-			opacity: 0.9;
+            display: flex;
 		}
 	}
 
-	&:first-child {
-        margin-right: 7.5px;
-    }
-
-    &:last-child {
-        margin-left: 7.5px;
-    }
-
     @media screen and (max-width: 800px) {
+        width: 44vw;
         height: 200px;
+        margin: 0 5px 15px;
     }
 `;
 
@@ -47,26 +41,48 @@ export const BackgroundImageContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-    height: 90px;
-    padding: 0 25px;
-    display: flex;
-    flex-direction: column;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    padding: 0 15px;
     align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    background-color: white;
-    opacity: 0.7;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5;
+    opacity: 0.6;
     position: absolute;
+    bottom: 0px;
+    display: none;
+    transition: .5s all ease-in-out;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    @media screen and (max-width: 800px) {
+        height: 40px;
+        display: flex;
+        padding: 0 5px;
+    }
 `;
 
 export const ContentTitle = styled.span`
-    font-weight: bold;
-    margin-bottom: 6px;
+    font-weight: 700;
     font-size: 22px;
+    letter-spacing: 0.4px;
     color: #4a4a4a;
+
+    @media screen and (max-width: 800px) {
+        font-size: 14px;
+    }
 `;
 
 export const ContentSubtitle = styled.span`
-    font-weight: lighter;
+    font-weight: 600;
     font-size: 16px;
+    letter-spacing: 0.2px;
+
+    @media screen and (max-width: 800px) {
+        font-size: 12px;
+    }
 `;

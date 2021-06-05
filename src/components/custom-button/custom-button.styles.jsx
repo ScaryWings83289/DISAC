@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
 const buttonStyles = css`
-    background-color: #4285f4;
+    background-color: #39a6a3;
     color: #ffffff;
     border: none;
 
     &:hover {
-        background-color: #357ae8;
+        background-color: #00adb5;
         border: none;
     }
 `;
@@ -19,21 +19,16 @@ const invertedButtonStyles = css`
     border: none;
 
     &:hover {
-        background-color: #000000;
+        background-color: #00adb5;
         color: #ffffff;
     }
 `;
 
 const googleSignInStyles = css`
-    background-color: #4285f4;
+    background-color: #ffffff;
     padding: 0 10px;
-    color: #ffffff;
-    border: none;
-
-    &:hover {
-        background-color: #357ae8;
-        border: none;
-    }
+    color: #39a6a3;
+    border: 1px solid #39a6a3;
 `;
 
 const getButtonStyles = props => {

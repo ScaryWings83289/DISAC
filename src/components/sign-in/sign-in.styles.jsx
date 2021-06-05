@@ -61,7 +61,7 @@ export const SignInSubtitle = styled.span`
     height: 40px;
     width: 40px;
     margin: 0 auto;
-    background: #4285f4;
+    background-color: #00adb5;
     color: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -71,7 +71,7 @@ export const SignInSubtitle = styled.span`
 
 export const ButtonsBarContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 export const AccountContainer = styled.p`
@@ -88,6 +88,6 @@ export const AccountContainer = styled.p`
         font-weight: 500;
         text-transform: uppercase;
         text-decoration: none;
-        color: #4285F4;
+        color: #00adb5;
     }
 `;

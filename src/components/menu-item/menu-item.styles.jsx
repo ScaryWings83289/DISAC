@@ -19,10 +19,6 @@ export const MenuItemContainer = styled.div`
 			transform: scale(1.1);
 			transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 		}
-
-		& .content {
-            display: flex;
-		}
 	}
 
     @media screen and (max-width: 800px) {
@@ -52,7 +48,7 @@ export const ContentContainer = styled.div`
     opacity: 0.6;
     position: absolute;
     bottom: 0px;
-    display: none;
+    display: flex;
     transition: .5s all ease-in-out;
 
     &:hover {

@@ -72,7 +72,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart, setCurrentState }) => {
                             isGoogleSignIn
                             className='google'
                         >
-                            Sign in with <GoogleIconSVG style={{width: 30, marginLeft: 5}} />
+                            Sign in with <GoogleIconSVG style={{width: 20, marginLeft: 5}} />
                         </CustomButton>
                     </ButtonsBarContainer>
                 </form>

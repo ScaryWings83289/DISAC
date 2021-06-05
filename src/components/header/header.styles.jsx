@@ -7,7 +7,7 @@ export const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
-    background-color: #4285f4;
+    background-color: #39a6a3;
 
     @media screen and (max-width: 800px) {
         padding: 10px 0px;

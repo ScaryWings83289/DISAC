@@ -10,8 +10,8 @@ export const CartMessageContainer = styled.div`
     padding: 93.5px 100px;
 
     @media screen and (max-width: 800px) {
-        min-height: 81.5vh;
-        padding: 45px 10px;
+        min-height: 83.6vh;
+        padding: 80px 10px;
     }
 `;
 

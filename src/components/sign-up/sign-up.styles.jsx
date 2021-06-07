@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const SignUpBoxContainer = styled.div`
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 80vh;
     display: flex;
+    border-radius: 20px;
 `;
 
 export const SignUpContainer = styled.div`
@@ -42,7 +43,7 @@ export const SignUpTitle = styled.h2`
 
 export const AccountContainer = styled.p`
     position: relative;
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0px 5px 0px;
     text-transform: uppercase;
     font-weight: 300;
 
@@ -61,18 +62,22 @@ export const AccountContainer = styled.p`
 export const ImageContainer = styled.div`
     position: relative;
     width: 50%;
-    height: 100%;
+    min-height: 80vh;
     background: #ffffff;
     transition: 0.5s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 
     & img {
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
         opacity: 0.9;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
 
         &:hover {
             opacity: 1;

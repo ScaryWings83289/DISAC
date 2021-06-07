@@ -15,6 +15,8 @@ export const ImageContainer = styled.div`
     height: 100%;
     background: #ffffff;
     transition: 0.5s;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 
     & img {
         position: absolute;
@@ -24,6 +26,8 @@ export const ImageContainer = styled.div`
         height: 100%;
         object-fit: cover;
         opacity: 0.9;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
 
         &:hover {
             opacity: 1;

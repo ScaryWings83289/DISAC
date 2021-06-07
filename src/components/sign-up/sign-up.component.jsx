@@ -21,21 +21,24 @@ const SignUp = ({ signUpStart, setCurrentState }) => {
     const [userCredentials, setUserCredentials] = useState({
         displayName: '',
         email: '',
+        phoneNumber: '',
         password: '',
         confirmPassword: ''
     });
 
-    const { displayName, email, password, confirmPassword } = userCredentials;
+    const { displayName, email, phoneNumber, password, confirmPassword } = userCredentials;
 
     const handleSubmit = async event => {
         event.preventDefault();
+
+        console.log(userCredentials);
 
         if (password !== confirmPassword) {
             alert("passwords don't match");
             return;
         }
 
-        signUpStart({ displayName, email, password });
+        signUpStart({ displayName, email, phoneNumber, password });
     };
 
     const handleChange = event => {
@@ -63,6 +66,14 @@ const SignUp = ({ signUpStart, setCurrentState }) => {
                         value={email}
                         onChange={handleChange}
                         label='Email'
+                        required
+                    />
+                    <FormInput
+                        type='number'
+                        name='phoneNumber'
+                        value={phoneNumber}
+                        onChange={handleChange}
+                        label='Mobile'
                         required
                     />
                     <FormInput

@@ -10,7 +10,6 @@ export const SignInAndSignUpContainer = styled.div`
     background: #fff;
     border-radius: 20px;
     box-shadow: -1px 4px 28px 0px rgb(0 0 0 / 20%);
-    overflow: hidden;    
 
     @media screen and (max-width: 900px) {
         width: 350px;

@@ -11,7 +11,12 @@ const StripeCheckoutButton = ({ price, cartItem, clearItem }) => {
     const priceForStripe = price * 100;
     const publishableKey = 'pk_test_51IedF9SBiu3eSr05QOwdtqRRHO6OI4JGrs9KZpBoDdc4BemIMSzXmvek5WRr34YQ2b9oPU3Uouz6GJHYmjcpiuA900jC60FpQq';
 
-    const closeDialog = () => setDialogIsOpen(false);
+    const closeDialog = () => { 
+        setDialogIsOpen(false);
+        cartItem.map((item) => {
+            return clearItem(item);
+        });
+    };
 
     const onToken = token => {
         const email = token.email;
@@ -40,9 +45,6 @@ const StripeCheckoutButton = ({ price, cartItem, clearItem }) => {
             console.log('SUCCESS!', response.status, response.text);
         }).catch((err) => {
             console.log('FAILED...', err);
-        });
-        cartItem.map((item) => {
-            return clearItem(item);
         });
         setDialogIsOpen(true);
     }; 

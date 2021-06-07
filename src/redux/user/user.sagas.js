@@ -36,6 +36,7 @@ export function* signInWithGoogle() {
     try {
         const { user } = yield auth.signInWithPopup(googleProvider);
         yield getSnapshotFromUserAuth(user);
+        console.log(user);
     } catch (error) {
         yield put(signInFailure(error));
     }
@@ -69,10 +70,10 @@ export function* signOut() {
     }
 }
 
-export function* signUp({ payload: { email, password, displayName } }) {
+export function* signUp({ payload: { email, password, displayName, phoneNumber } }) {
     try {
         const { user } = yield auth.createUserWithEmailAndPassword(email, password);
-        yield put(signUpSuccess({ user, additionalData: { displayName } }));
+        yield put(signUpSuccess({ user, additionalData: { displayName, phoneNumber } }));
     } catch (error) {
         yield put(signUpFailure(error));
     }

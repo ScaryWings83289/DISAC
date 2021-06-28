@@ -35,7 +35,7 @@ Product Preview:
 Sign-in && Sign-Up Page:
 
 ![](src/assets/signinup.jpg)
-
+---
 Cart Section:
 
 ![](src/assets/cart.jpg)

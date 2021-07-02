@@ -19,8 +19,8 @@ The application is composed of the following Features:
 ### Firebase
 
 * As of this moment I am using firebase for user authentication, also enabled google sign in authentication.
-* It is also used to store user data 
-* In the future it will also hold all shopping related and cart related dtaa of each user.
+* It is also used to store user details.                                              //what is it here ?? firestore of firebase authentication
+* In the future it(firestore) will also contain shopping related and cart related details of each user.
 
 **SCREENSHOTS:**
 

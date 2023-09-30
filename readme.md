@@ -1,68 +1,88 @@
-# E-commerce Website
+# DISAC - Full-Stack E-Commerce Website
 
-![Made-With-React](https://img.shields.io/badge/Made_with-React-informational?style=for-the-badge&logo=react) ![Made-With-NodeJS](https://img.shields.io/badge/Made_with-NodeJS-informational?style=for-the-badge&logo=javascript) ![Made-With-Material_UI](https://img.shields.io/badge/Made_with-Material_UI-informational?style=for-the-badge&logo=material-ui)
+![Made-With-React](https://img.shields.io/badge/Made_with-React-informational?style=for-the-badge&logo=react) ![Made-With-Firebase](https://img.shields.io/badge/Made_with-Firebase-informational?style=for-the-badge&logo=firebase) ![Made-With-Material_UI](https://img.shields.io/badge/Made_with-Material_UI-informational?style=for-the-badge&logo=material-ui)
+![Made-With-Redux](https://img.shields.io/badge/Made_with-Redux-informational?style=for-the-badge&logo=redux)
+![Made-With-Stripe](https://img.shields.io/badge/Made_with-Stripe-informational?style=for-the-badge&logo=stripe)
 
-An E commerce platform made using React JS, Redux, Firebase (authentication), Firestore, Stripe API (temporarily creating dummy payment gateway)
-
-The application is composed of the following Features:
-
-### Front-End
-* A landing page with animated minimalistic design, with the major categories of items.
-* A quick peek page where 5 products of each categories are on display.
-* A page with Sign-in and Sign-out components.
-* All form related fields are made using reusable components.
-* Has a cart feature which opens up and displays the items selected in a summary, also has a checkout button.
-* The cart component also allows to edit the contents of the items selected.
-* Check out features are yet to be integrated into the appplication. 
+This is a full-stack e-commerce website developed using React.js, Redux, Material-UI, Firebase for authentication and database, Stripe for payment processing, and Styled Components for styling. The website allows users to browse products, add items to their cart, make purchases, and manage their accounts.
 
 
-### Firebase
+## Prerequisites
 
-* As of this moment I am using firebase for user authentication, also enabled google sign in authentication.
-* Firebase authentication also provides services in order to store basic user details.
-* In the future it(firestore) will also contain shopping related and cart related details of each user.
+Before you begin, ensure you have met the following requirements:
+
+- Node.js and npm installed
+- Firebase account for authentication and database
+- Stripe account for payment processing
+
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/ScaryWings83289/DISAC.git
+cd DISAC
+```
+
+2. Install dependencies:
+```bash
+yarn install
+```
+
+3. Configure environment variables (e.g., Firebase and Stripe credentials) in a .env file.
+
+4. Start the development server:
+```bash
+yarn start
+```
+
+5. Access the website by navigating to http://localhost:3000 in your web browser.
+
+
+## Usage 
+
+The website allows users to:
+
+- Browse a catalog of products with detailed descriptions.
+- Add products to the shopping cart.
+- Adjust the quantity or remove items from the cart.
+- Proceed to checkout and make payments securely using Stripe.
+- Create accounts, log in, and manage their profiles.
+- View order history and track order status.
+
+
+## Features
+Here are some key features of the website:
+
+- User registration and authentication using Firebase.
+- Real-time product updates and cart management.
+- Secure payment processing through Stripe.
+- Dynamic and responsive design with Material-UI and Styled Components.
+- User-friendly interfaces for adding and viewing a particular product.
 
 **SCREENSHOTS:**
 
 Landing Page:
 
 ![](src/assets/main-screen.jpg)
----
 Product Preview:
 
 ![](src/assets/preview-page.jpg)
----
 Sign-in && Sign-Up Page:
 
 ![](src/assets/signinup.jpg)
----
-Cart Section:
 
+Cart Section:
 ![](src/assets/cart.jpg)
 
----
 
 ## Developed With
 
 * [Visual Studio Code](https://code.visualstudio.com/) - A source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring
 * [React](https://reactjs.org/) - A javascript library for building user interfaces
 * [Create react app](https://create-react-app.dev/) - A quick method to start developing a react application.
+* [Firebase](https://firebase.google.com/) - Firebase is a set of backend cloud computing services and application development platforms provided by Google.
 * [Babel](https://babeljs.io/) - A transpiler for javascript
 * [Webpack](https://webpack.js.org/) - A module bundler
 * [SCSS](http://sass-lang.com/) - A css metalanguage
 
----
-
-## Quick Start
-
-Clone the repository and do following:
-
-```bash
-# Install dependencies for client
-npm install or yarn install
-
-# Run the client 
-npm start or yarn start
-
-# Client runs on http://localhost:3000
-```
